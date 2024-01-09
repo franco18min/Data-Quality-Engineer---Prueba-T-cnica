@@ -11,7 +11,6 @@
 <details>
   <summary>Tabla de contenido</summary>
   <ol>
-    <li><a href="#Indice">Índice</a></li>
     <li><a href="#Introducción">Introducción</a></li>
     <li><a href="#Objetivo">Objetivo</a></li>
     <li><a href="#Alcance">Alcance</a></li>
@@ -37,8 +36,7 @@ La prueba busca alcanzar los siguientes objetivos especificos:
 La prueba fue desarrollada siguiendo los pasos a continuación:
 
 1. Pre-procesamiento de datos del archivo JSON en donde hemos desanidado complementamente los mismo para tener un dataframe plano facil de manipular. [spotify_json_to_csv.py](spotify_json_to_csv.py)
-2. Análisis exploratorio de datos con el fin de encontrar anomalias en la calidad de datos. [SpotifyDataQualityAnalysis.ipynb](SpotifyDataQualityAnalysis.ipynb)
-3. Desarrollo del reporte de calidad de datos que sera el mismo archivo ipynb que se encuentra en este repositorio.
+2. Desarrollo del reporte de calidad de datos que sera el mismo archivo ipynb que se encuentra en este repositorio. [SpotifyDataQualityAnalysis.ipynb](SpotifyDataQualityAnalysis.ipynb)
 
 ## Tecnologías
 ![Pycharm](https://img.shields.io/badge/Pycharm-000000?style=for-the-badge&logo=Pycharm&logoColor=white)
@@ -51,17 +49,19 @@ La prueba fue desarrollada siguiendo los pasos a continuación:
 
 ## Conclusiones relevantes
 1. **Conclusiones**
-- Tenemos datos nulos en las columnas "album_name", "track_name", "track_id", "danceability", "energy", "key", "loudness", "speechiness", "acousticness", "liveness", "tempo" y "time_signature" que deberiamos analizar y tomar una decision de que hacer con ellos.
-- Tenemos datos repetidos en las columnas "id" y "track_id" que deberiamos analizar y tomar una decision de que hacer con ellos.
-- Tenemos datos que no corresponden al tipo de datos que deberian ser en las columnas "key", "instrumentalness" y "time_signature" que deberiamos analizar y tomar una decision de que hacer con ellos.
-- Tenemos datos que no corresponden al intervalo de valores que deberian ser en las columnas "track_popularity", "acousticness" e "instrumentalness" que deberiamos analizar y tomar una decision de que hacer con ellos.
+- Tenemos dos albumes con nombre nulo que sumado ambos son un total de 62 canciones en nuestro dataset
+- Tenemos datos repetidos en las columnas "id" y "track_id" que que pertenecen a las canciones.
+- Tenemos datos en "instrumentalness" que tiene un formato incorrecto y podria causar errores para analisis posteriores.
+- Tenemos 3 columnas "artist_name", "artist_id" y "artist_popularity" que no estarian aportando informacion relevante para el analisis de calidad de datos ya que todo el dataset corresponde a la cantante Taylor Swift.
+- Como punto final di recomendaciones que podrian servir para mejorar la calidad de datos en el futuro.
 
 ## Desarrollador
 <div align="center">
 
  
 | [<img src="https://avatars.githubusercontent.com/u/44064764?v=4" width=115><br><sub>Franco Aguilera</sub>](https://github.com/franco18min) |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
+|:------------------------------------------------------------------------------------------------------------------------------------------:| 
+
 
 Aquí esta mi Linkedin si te quieres poner en contacto conmigo: </br>
 
